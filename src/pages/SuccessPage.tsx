@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLocation, Navigate, Link } from 'react-router-dom';
 
@@ -19,24 +18,24 @@ const SuccessPage = () => {
   const location = useLocation();
   const { formData } = location.state as { formData: FormData } || {};
   
-  // If there's no form data, redirect to registration
   if (!formData) {
     return <Navigate to="/" replace />;
   }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-white p-4">
-      <div className="w-full max-w-6xl rounded-lg shadow-lg overflow-hidden">
+      <div className="w-full max-w-6xl rounded-lg shadow-lg shadow-lg border-2 border-black/10 overflow-hidden">
         <div className="flex flex-col md:flex-row">
-          {/* Left column - Image placeholder */}
           <div className="flex-1 bg-custom-light flex items-center justify-center">
-            {/* Empty space for custom image */}
             <div className="w-full h-full min-h-[300px] md:min-h-[600px] flex items-center justify-center border-r border-gray-100">
-              <div className="text-custom-red/50 text-lg">Your custom image here</div>
+              <img
+                src="/gif.gif"
+                alt="Placeholder"
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
           
-          {/* Right column - Registration success */}
           <div className="flex-1 p-6 md:p-8 bg-white">
             <div className="mb-8 border-b border-gray-200 pb-4">
               <h2 className="text-center text-3xl font-semibold text-custom-red">Registration Successful!</h2>
@@ -46,7 +45,6 @@ const SuccessPage = () => {
               <p className="mb-4 text-lg text-gray-700">The details submitted to us are:</p>
               
               <div className="flex flex-col gap-6 md:flex-row">
-                {/* Personal Details Column */}
                 <div className="flex-1">
                   <h3 className="mb-3 text-xl font-semibold text-custom-red">Personal Details:</h3>
                   <ul className="space-y-3 text-gray-700">
@@ -73,7 +71,6 @@ const SuccessPage = () => {
                   </ul>
                 </div>
                 
-                {/* Communication Details Column */}
                 <div className="flex-1">
                   <h3 className="mb-3 text-xl font-semibold text-custom-red">Communication Details:</h3>
                   <ul className="space-y-3 text-gray-700">
@@ -98,7 +95,6 @@ const SuccessPage = () => {
               </div>
             </div>
             
-            {/* Back to registration button */}
             <div className="mt-8 text-center">
               <Link
                 to="/"

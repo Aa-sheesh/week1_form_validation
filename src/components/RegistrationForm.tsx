@@ -143,7 +143,7 @@ const RegistrationForm = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center p-4 bg-white">
-      <div className="w-full max-w-6xl rounded-lg shadow-lg overflow-hidden">
+      <div className="w-full max-w-6xl rounded-lg shadow-lg border-2 border-black/10 overflow-hidden">
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 bg-custom-light flex items-center justify-center">
             <div className="w-full h-full min-h-[300px] md:min-h-[600px] flex items-center justify-center border-r border-gray-100">
